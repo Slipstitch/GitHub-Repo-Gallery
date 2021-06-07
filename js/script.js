@@ -4,6 +4,10 @@ const profileOverview = document.querySelector (".overview");
 const username = "Slipstitch";
 //select unordered list to display the repos list
 const reposList = document.querySelector (".repo-list");
+//selects section with class of "repos" where all the repo info appears
+const allRepoInfo = document.querySelector (".repos");
+//selects section with class of "repo-data" where individual data appears
+const repoIndivInfo = document.querySelector (".repo-data");
 
 
 //Fetch API JSON data
@@ -50,6 +54,53 @@ const displayRepoInfo = function (repos) {
 		repoItem.innerHTML = `<h3>${repo.name}</h3>`;
 		reposList.append(repoItem);
 	}
-
 };
 
+//Event Listener and handler for click on unordered list (class "repo-list")
+
+reposList.addEventListener ("click", function (e) {
+	if (e.target.matches("h3")) {
+		const repoName = e.target.innerText;
+		getRepoInfo(repoName);
+	}
+
+});
+
+//function to get specific repo info
+ 
+ const getRepoInfo = async function (repoName) {
+ 	const fetchRepoInfo = await fetch (`https://api.github.com/repos/${username}/${repoName}`);
+    const repoInfo = await fetchRepoInfo.json();
+    console.log(repoInfo); 
+
+    //Grab languages
+    const fetchLanguages = await fetch (repoInfo.languages_url);
+    const languageData = await fetchLanguages.json();
+    //console.log(languageData);
+
+    //Make array of languages
+    const languages = [];
+    for (const language in languageData) {
+    	languages.push(language);
+    	//console.log(languages);
+    }
+    displaySpecificRepoInfo(repoInfo, languages);
+ };
+
+ //function to display specific repo info
+ const displaySpecificRepoInfo = function (repoInfo, languages) {
+ 	repoIndivInfo.innerHTML = "";
+ 	const div = document.createElement("div");
+ 	div.innerHTML = `
+ 	<h3>Name: ${repoInfo.name}</h3>
+ 	<p>Description: ${repoInfo.description}</p>
+ 	<p>Default Branch: ${repoInfo.default_branch}</p>
+ 	<p>languages: ${languages.join(", ")}</p>
+ 	<a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>
+ 	`;
+
+     repoIndivInfo.append(div);
+     repoIndivInfo.classList.remove("hide");
+     allRepoInfo.classList.add("hide");
+     
+ }; 
