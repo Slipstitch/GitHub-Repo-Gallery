@@ -16,7 +16,7 @@ const filterInput = document.querySelector(".filter-repos");
 
 //Fetch API JSON data
 const getUserInfo = async function () {
-	const showRequest = await fetch (`http://api.github.com/users/${username}`);
+	const showRequest = await fetch (`https://api.github.com/users/${username}`);
 	const data = await showRequest.json();
 	//console.log(showRequest);
 	displayUserInfo(data);
@@ -44,7 +44,7 @@ const displayUserInfo = function (data) {
 
 //Fetch the repos
 const getRepos = async function () {
-	const fetchRepos = await fetch (`http://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
+	const fetchRepos = await fetch (`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
 	const repoData = await fetchRepos.json();
 	displayRepoInfo(repoData);
 	
