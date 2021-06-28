@@ -16,7 +16,7 @@ const filterInput = document.querySelector(".filter-repos");
 
 //Fetch API JSON data
 const getUserInfo = async function () {
-	const showRequest = await fetch (`http://api.github.com/users/${username}`);
+	const showRequest = await fetch (`https://api.github.com/users/${username}`);
 	const data = await showRequest.json();
 	//console.log(showRequest);
 	displayUserInfo(data);
