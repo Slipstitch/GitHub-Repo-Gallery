@@ -1,0 +1,54 @@
+[33mcommit 65a75b6ea44d629fd2b0224a51c53b4b753b6108[m[33m ([m[1;36mHEAD -> [m[1;32mgh-pages[m[33m)[m
+Merge: eb2d226 89faf3a
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Wed Jun 30 10:05:55 2021 -0500
+
+    merge main to gh-pages
+
+[33mcommit 89faf3a8104e2b51eb8652fb4a6fc4134e265871[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 28 13:44:59 2021 -0500
+
+    update
+
+[33mcommit eb2d226dca6252c31cc7a73442953b9b856cbb12[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 28 13:10:00 2021 -0500
+
+    update https
+
+[33mcommit f7b117951ef675d4d69d91aa3e533408bbe80b8c[m[33m ([m[1;31morigin/gh-pages[m[33m)[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 28 12:57:19 2021 -0500
+
+    corrected https api pathway
+
+[33mcommit 5773e3479aef4fcf02a029d282cdd9e0183f7e35[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 28 12:47:39 2021 -0500
+
+    Trigger rebuild
+
+[33mcommit 338206d43f7fd13051bd5e7c1315ee76fd1de9cd[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 28 11:44:48 2021 -0500
+
+    back button and dynamic search
+
+[33mcommit 04b3f0e703a4150af5ecd5aaef38d14bbab64b28[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 7 17:59:57 2021 -0500
+
+    Display repo info
+
+[33mcommit 2489b833bc1d2bdb886d9dd104993deaf82e2f67[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 7 16:04:40 2021 -0500
+
+    Added repos to gallery
+
+[33mcommit 85944c29dd7045766566f4ee4b98f8fdef31edec[m
+Author: Sheila Harder <56269957+Slipstitch@users.noreply.github.com>
+Date:   Mon Jun 7 14:43:35 2021 -0500
+
+    Initial commit
